@@ -1,0 +1,14 @@
+body {
+    font-family: "Open Sans", sans-serif; 
+}
+
+h1, h2, h3 {
+    font-family: "Lato", sans-serif; 
+}
+
+.jumbotron {
+    background-image: url("/img/coffee-beans-dark-background-top-view-coffee-concept-banner.jpg");
+    background-size: cover;
+}
+
+

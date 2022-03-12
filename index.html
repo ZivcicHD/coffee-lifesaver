@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap"/>
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Coffee Lifesaver</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <div class="container">
+                    <a class="navbar-brand h1 my-auto ml-auto" href="#"><span>Coffee Lifesaver</span></a>            
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lifesaverNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="lifesaverNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link" href="#">About us</a>
+                            </li>
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link" href="#">Menu</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <span class="h1">FEEL THE DIFFERENCE</span>
+            <div class="row">
+                <img src="./img/coffee-bike.png" class="img-fluid" alt="coffee bike">
+            </div>
+        </div>
+        
+    </header>
+
+    
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
