@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap"/>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Coffee Lifesaver</title>
+</head>
+<body>
+    
+        <nav class="navbar navbar-expand-md sticky-top">
+            <div class="container">
+                    <a class="navbar-brand h1 my-auto ml-auto" href="/index.html"><span>Coffee Lifesaver</span></a>            
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lifesaverNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="lifesaverNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link" href="/index.html">Home</a>
+                            </li>
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link active" href="#">Franchise</a>
+                            </li>
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="navbar-item mr-2">
+                                <a class="nav-link" href="#">Menu</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+        <footer class="site-footer text-white text-center text-sm-start">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-4 col-sm-12 mt-4 mb-2 mb-sm-0">
+                        <h5 class="text-uppercase mb-4">How to contact us:</h5>
+                        <button type="button" class="btn btn-warning text-white" data-toggle="modal"
+                            data-target="#modalRegular">Show me
+                            the map!</button>
+                        <div class="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body mb-0 p-0">
+                                        <div id="map-container-google-16" class="z-depth-1-half map-container-9"
+                                            style="height: 400px">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d340260.75859042717!2d16.09987995821705!3d48.2203445362346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e5136ca9f%3A0xfdc2e58a51a25b46!2sWien!5e0!3m2!1sde!2sat!4v1648074567410!5m2!1sde!2sat"
+                                                width="400" height="300" style="border:0;" allowfullscreen=""
+                                                loading="lazy"></iframe>
+                                        </div>
+    
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+    
+                                        <button type="button" class="btn btn-warning btn-md">Save location <i
+                                                class="fas fa-map-marker-alt ml-1"></i></button>
+                                        <button type="button" class="btn btn-outline-warning btn-md"
+                                            data-dismiss="modal">Close
+                                            <i class="fa fa-times ml-1"></i></button>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <a type="button" class="btn btn-floating btn-warning btn-md"><span
+                                    class="fa fa-facebook"></span></a>
+                            <a type="button" class="btn btn-floating btn-warning btn-md"><i class="fa fa-instagram"></i></a>
+                            <a type="button" class="btn btn-floating btn-warning btn-md"><i class="fa fa-twitter"></i></a>
+                            <a type="button" class="btn btn-floating btn-warning btn-md"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 mt-4 mb-sm-2">
+                        <ul class="fa-ul" style="margin-left: 1.65em;">
+                            <li class="mb-3">
+                                <span class="fa-li fa fa-home fa-lg"></span><span>1060 Vienna, Austria</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li fa fa-envelope fa-lg"></span><span>info@coffee-lifesaver.com</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li fa fa-phone fa-lg"></span><span>+ 43 1 234 567 88</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-12 mt-4 mb-1 mb-sm-0">
+                        <h5 class="text-uppercase mb-4">Give us a call</h5>
+    
+                        <table class="table text-center text-white">
+                            <tbody class="font-weight-normal">
+                                <tr>
+                                    <td>Mon - Thu:</td>
+                                    <td>8 - 16</td>
+                                </tr>
+                                <tr>
+                                    <td>Fri - Sat:</td>
+                                    <td>8 - 13</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday:</td>
+                                    <td>You don't call</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="text-center p-3 copyright">
+                © 2022<a href="#"> Hrvoje Danijel Zivcic</a>
+            </div>
+        </footer>
+        
+     
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
+</body>
+</html>

@@ -1,63 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Coffee Lifesaver</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-            <div class="container">
-                    <a class="navbar-brand h1 my-auto ml-auto" href="#"><span>Coffee Lifesaver</span></a>            
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lifesaverNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="lifesaverNavbar">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="navbar-item mr-2">
-                                <a class="nav-link active" href="#">Home</a>
-                            </li>
-                            <li class="navbar-item mr-2">
-                                <a class="nav-link" href="#">About us</a>
-                            </li>
-                            <li class="navbar-item mr-2">
-                                <a class="nav-link" href="#">Services</a>
-                            </li>
-                            <li class="navbar-item mr-2">
-                                <a class="nav-link" href="#">Menu</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
-        </nav>
-        
+
+    <nav class="navbar navbar-expand-md sticky-top">
         <div class="container">
-            <span class="h1">FEEL THE DIFFERENCE</span>
-            <div class="row">
-                <img src="./img/coffee-bike.png" class="img-fluid" alt="coffee bike">
+            <a class="navbar-brand h1 my-auto ml-auto" href="#"><span>Coffee Lifesaver</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lifesaverNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="lifesaverNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item mr-2">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="navbar-item mr-2">
+                        <a class="nav-link" href="/franchise.html">Franchise</a>
+                    </li>
+                    <li class="navbar-item mr-2">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="navbar-item mr-2">
+                        <a class="nav-link" href="/menu.html">Menu</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        
-    </header>
+    </nav>
 
-    
+    <div class="jumbotron">
+        <div class="row">
+            <h1 class="ml-sm-2">A mobile Coffee Co.</h1>
+            <img src="./img/coffee-bike.png" class="img-fluid" alt="coffee bike">
+        </div>
+        <div class="row">
+            <a type="button" class="btn btn-warning text-white mr-2" href="#reserveModal" id="reserveButton">Book an Event</a>
+            <a type="button" class="btn btn-warning text-white" role="button">Become a partner</a>
+        </div>
+    </div>
+    <!-- booking Modal -->
+    <!-- Modal Structure -->
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div id="header-bg"> 
+                        <h3 class="modal-title">Book an Event</h3>
+                        <p>Select general setup,<br> and We'll get backt to you for details!</p>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <div class="col-sm-12"> 
+                                    <select class="form-control" name="eventLocation" id="eventLocation">
+                                        <option value="" disabled selected>Select Location</option>
+                                        <option value="Vienna">Vienna</option>
+                                        <option value="Graz">Graz</option>
+                                        <option value="Salzburg">Salzburg</option>
+                                        <option value="Berlin">Berlin</option>
+                                        <option value="Munich">Munich</option>
+                                        <option value="Prague">Prague</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label">Select Date</label>
+                                <div class="col-sm-6">
+                                    <input type="date" id="date" name="date" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <select class="form-control" name="numOfGuests" id="numOfGuests">
+                                        <option value="" disabled selected>Number of Guests(approx)</option>
+                                        <option value="1">&lt; 10</option>
+                                        <option value="2">10 - 30</option>
+                                        <option value="3">30 - 50</option>
+                                        <option value="4">50 - 100</option>
+                                        <option value="5">&gt; 100</option>
+                                    </select>
+                                </div>
+                            </div>
+                                <div class="col-sm-12">
+                                    <input type="checkbox" id="checkbox-1" />
+                                    <label for="checkbox-1">Just Coffee and Fresh Juices</label>
+                                </div>
+                                <div class="col-sm-12">
+                                    <input type="checkbox" id="checkbox-2" />
+                                    <label for="checkbox-2">Full Service with Coffee and Delicious Pastries</label>
+                                </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" value="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="container bg-secondary">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mt-2 espresso-img">
+                <img src="/img/person-serving-cup-coffee-with-metal-jug.jpg" class="img-fluid d-xs-none" alt="espresso">
+            </div>
+            <div class="col-md-6 mt-2">
+                <h3>Barista Coffee - right where You need it!</h3>
+                <p class="text-white">Owing to the Coffee-Bike’s self-sufficient operating mode, coffee lovers can indulge in the finest
+                    hot beverages at the most unusual locations; whether on the weekly market, at a street corner, in
+                    the park or especially booked for caterings and events. The mobile coffee bar attracts people’s
+                    attention.</p>
+                <p class="text-white">Equipped with a professional portafilter machine, a specially constructed coffee grinder, a juice
+                    squeezer, sufficient means of storage and many other features, the Coffee-Bike is the perfect
+                    full-value mobile coffee shop with small space requirements and unbeatably low investment costs.</p>
+                <p class="text-white">Our cafés on three wheels offer various coffee classics and coffee specialities made from our
+                    own-brand "Caferino" espresso beans that hold organic certification. We also offer freshly pressed
+                    orange juice, various types of tea, hot chocolate and different snacks.</p>
+            </div>
+        </div>
+        <div class="row text-white text-center text-sm-start mt-5">
+            <div class="col-md-4 mb-4">
+                <span class="fa fa-coffee fa-2x">  100 % Taste</span>
+            </div>
+            <div class="col-md-4 mb-4">
+                <span class="fa fa-bullhorn fa-2x">  100 % Attention</span>
+            </div>
+            <div class="col-md-4">
+                <span class="fa fa-bicycle fa-2x">  100 % Mobile</span>
+            </div>
+        </div>
+        <div class="card mt-5">
+            <img class="card-img-top" src="/img/sack-with-coffee-beans-desk.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Our Blend: The riding Barista</h5>
+                <p class="card-text text-black-50">Our exceptional top espresso – perfected over years – combines the
+                    best of two worlds. On the one hand, the aromatic blend of Arabica beans from the best growing areas
+                    of Central and South America, on the other hand, the highest quality Robusta coffee beans. This
+                    results in an espresso that is second to none! Balanced, persistent taste, hazelnutty and chocolaty
+                    aroma, fine spicy and full body with chocolaty background and velvety fine crema. Hand roasted in
+                    small batches by our master roaster with love!</p>
+                <p class="card-text"><small class="text-muted">83% ARABICA, 17% ROBUSTA</small></p>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h1>Events & Locations</h1>
+            <p>We're unique partner to provide You and your guests real Barista experience at events!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="/img/vienna.jpg " class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption text-white">Vienna</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="/img/graz3.jpg"
+                            class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption text-white">Graz</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="/img/salzburg.jpg" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption text-white">Salzburg</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="/img/berlin.jpg" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption text-white">Berlin</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="/img/munich.jpg" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption text-white">Munich</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="/img/prague.jpg" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption text-white">Prague</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="site-footer text-white text-center text-sm-start">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-4 col-sm-12 mt-4 mb-2 mb-sm-0">
+                    <h5 class="text-uppercase mb-4">How to reach us</h5>
+                    <button type="button" class="btn btn-warning text-white" data-toggle="modal"
+                        data-target="#modalRegular">Show me
+                        the map!</button>
+                    <div class="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body mb-0 p-0">
+                                    <div id="map-container-google-16" class="z-depth-1-half map-container-9"
+                                        style="height: 400px">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d340260.75859042717!2d16.09987995821705!3d48.2203445362346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e5136ca9f%3A0xfdc2e58a51a25b46!2sWien!5e0!3m2!1sde!2sat!4v1648074567410!5m2!1sde!2sat"
+                                            width="400" height="300" style="border:0;" allowfullscreen=""
+                                            loading="lazy"></iframe>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-center">
+
+                                    <button type="button" class="btn btn-warning btn-md">Save location <i
+                                            class="fas fa-map-marker-alt ml-1"></i></button>
+                                    <button type="button" class="btn btn-outline-warning btn-md"
+                                        data-dismiss="modal">Close
+                                        <i class="fa fa-times ml-1"></i></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a type="button" class="btn btn-floating btn-warning btn-md"><span
+                                class="fa fa-facebook"></span></a>
+                        <a type="button" class="btn btn-floating btn-warning btn-md"><i class="fa fa-instagram"></i></a>
+                        <a type="button" class="btn btn-floating btn-warning btn-md"><i class="fa fa-twitter"></i></a>
+                        <a type="button" class="btn btn-floating btn-warning btn-md"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mt-4 mb-sm-2">
+                    <ul class="fa-ul" style="margin-left: 1.65em;">
+                        <li class="mb-3">
+                            <span class="fa-li fa fa-home fa-lg"></span><span>1060 Vienna, Austria</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li fa fa-envelope fa-lg"></span><span>info@coffee-lifesaver.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li fa fa-phone fa-lg"></span><span>+ 43 1 234 567 88</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 mt-4 mb-1 mb-sm-0">
+                    <h5 class="text-uppercase mb-4">Give us a call</h5>
+
+                    <table class="table text-center text-white">
+                        <tbody class="font-weight-normal">
+                            <tr>
+                                <td>Mon - Thu:</td>
+                                <td>8 - 16</td>
+                            </tr>
+                            <tr>
+                                <td>Fri - Sat:</td>
+                                <td>8 - 13</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday:</td>
+                                <td>You don't call</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-3 copyright">
+            © 2022<a href="#"> Hrvoje Danijel Zivcic</a>
+        </div>
+    </footer>
+
+
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
 </body>
+
 </html>
